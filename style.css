@@ -1,0 +1,43 @@
+div { background-color: white;
+  width: 300px;
+  border: 15px white;
+  padding: 50px;
+  margin: 20px;
+border-radius: 10px;
+position : relative;
+
+}
+.email{
+height:45}
+.pass{
+height:45}
+.login{
+border-radius:5px;
+background-color:  #0080ff;
+border: none;
+color: white;
+padding:15px 32px;
+width:250px;
+text-decoration: none;
+margin:4px 2px;
+cursor: pointer;
+
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  background-color: #0088ff;
+}
+
+.flex-container > div1{
+  background-color: #0088ff;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 10px;
+  color: white;
+}
+
+
+
