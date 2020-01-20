@@ -1,26 +1,33 @@
 <html>
 <head><center><h1>Signup page</h1><br>
+    
 <h5 style="color:blue">Please Enter your details!!</h5>
 <title>Signup page</title>
 </center></head>
 <body> 
-<a href="https://accounts.google.com/AccountChooser?service=lso">Sign in with google</a>
 <p>First Name(in capitals):
-<input type="text area">
+<input type="text area" id="name">
 <br>
 Last Name(in capitals):
-<input type="text area">
+<input type="text area" id="last">
 <br>
 email address:
 <input type="email">
 <br>
 New Password:
-<input type="password">
+<input type="password"><br>
 
 Confirm Password:
-<input type="password">
-
-
+<input type="password"><br>
+<button onclick="funct()">Submit</button>
+</p>
+<script>function funct()
+    {
+        alert("Please enter name")
+    }
+    </script>
+</body>
+</html>
 
 
 
