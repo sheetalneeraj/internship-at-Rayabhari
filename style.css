@@ -42,6 +42,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   background-color: #0c73d9;
+  opacity=0.8
 }
 
 .flex-container > div1{
@@ -52,5 +53,6 @@ cursor: pointer;
   line-height: 25px;
   font-size: 10px;
   color: white;
+  opacity: 0.8;
 }
 
