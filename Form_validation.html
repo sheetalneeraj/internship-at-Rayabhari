@@ -1,0 +1,67 @@
+
+
+<html>   
+   <head> <center><h1>Registration Form</h1></center>
+      <title>Form Validation</title>      
+      </head>
+   
+   <body>
+      <form action="newlogin.htm" name = "myForm" onsubmit = "return(validate());">
+           
+           Name: <input type = "text" name = "Name">
+           <br>
+            
+            
+         
+            Email:<input type = "text" name = "EMail" />
+            <br>
+            
+            Password:
+               <input type = "password" name = "Password" />
+                <br> 
+            
+            
+                   Country:<select name = "Country"> 
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">USA</option>
+                     <option value = "2">UK</option>
+                     <option value = "3">INDIA</option>
+                  </select>
+
+               <br><input type = "submit" value = "Submit" /></td>
+            
+            
+         
+      </form>      
+   </body>
+</html>
+<script >
+   
+      // Form validation code will come here.
+      function validate() {
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.Password.value == "")
+            {
+            
+            alert( "Please provide a password " );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         if( document.myForm.Country.value == "-1" ) {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         return( true );
+      }
+   
+</script>
