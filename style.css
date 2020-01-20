@@ -2,22 +2,37 @@ div { background-color: white;
   width: 300px;
   border: 15px white;
   padding: 50px;
-  margin: 20px;
+  margin: 5px;
 border-radius: 10px;
 position : relative;
+box-shadow: 1px 3px 1px 0px #0040ff;
 
 }
 .email{
-height:45}
+  margin-bottom: 10px;
+height:45;
+width: 300px;
+border:2px solid gainsboro;
+border-radius:5px;
+text-decoration: none;
+padding-left:8px;
+background-color: white;}
 .pass{
-height:45}
+  margin-bottom: 17px;
+  height:45;
+  width: 300px;
+  border-radius:5px;
+  text-decoration:none;
+  background-color: white;
+  border:2px solid gainsboro;
+padding-left: 8px;}
 .login{
 border-radius:5px;
 background-color:  #0080ff;
 border: none;
 color: white;
 padding:15px 32px;
-width:250px;
+width:300px;
 text-decoration: none;
 margin:4px 2px;
 cursor: pointer;
@@ -26,11 +41,11 @@ cursor: pointer;
 .flex-container {
   display: flex;
   justify-content: center;
-  background-color: #0088ff;
+  background-color: #0c73d9;
 }
 
 .flex-container > div1{
-  background-color: #0088ff;
+  background-color: #0c73d9;
   width: 200px;
   margin: 20px;
   text-align: center;
@@ -38,6 +53,4 @@ cursor: pointer;
   font-size: 10px;
   color: white;
 }
-
-
 
