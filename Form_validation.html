@@ -4,24 +4,25 @@
    <head> <center><h1>Registration Form</h1></center>
       <title>Form Validation</title>      
       </head>
-   
-   <body>
+   <link rel="stylesheet" href="validstyle.css"
+   <body >
+      <div class="container">
       <form action="newlogin.htm" name = "myForm" onsubmit = "return(validate());">
            
-           Name: <input type = "text" name = "Name" id="Name">
-           <br>
+         <tr>Name:<td><input type = "text" name = "Name" id="Name" min="3" max="50"/><font color="red" size="2"> * The name should be between 3 and 50 characters</font></td></tr>
+         <br>
             
+   
          
-         
-            Email:<input type = "text" name = "EMail" />
+         <tr>Email:<td><input type = "text" name = "EMail" /></td></tr>
             <br>
             
-            Password:
-               <input type = "password" name = "Password" />
+         <tr>Password:<td>
+               <input type = "password" name = "Password" id="Password"/></td></tr>
                 <br> 
                
-            Confirm Password:
-            <input type="password" name="Confirm"/> <br>
+           <tr>Confirm Password:
+            <td><input type="password" name="Confirm" id="Confirm"/> </td></tr><br>
 
             
                    Country:<select name = "Country"> 
@@ -29,11 +30,12 @@
                      <option value = "1">USA</option>
                      <option value = "2">UK</option>
                      <option value = "3">INDIA</option>
-                  </select>
-
-               <br><input type = "submit" value = "Submit" id="sub">
-            
-            
+                  </select><br>
+                  MobileNo:<input type="number" name="mobile" id="phone">
+               </div>
+               <br><center><input type = "submit" value = "Submit" id="sub">
+</center>            
+                
          
       </form>      
    </body>
@@ -42,24 +44,44 @@
    
       
       function validate() {
-      
+         var Pass=document.getElementById("Password").value;
+         var CPass=document.getElementById("Confirm").value;
+         var name =document.getElementById("Name").value;
+         var phone=document.getElementById("phone").value;
+         
          if( document.myForm.Name.value == "" ) {
+            
             alert( "Please provide your name!" );
             document.myForm.Name.focus() ;
+            
             return false;
          }
+         if(name.length< 3 || name.length >50){
+           alert ("Name length should be between 3 and 50");
+         return false;
+         }do
+        
+
          
          if( document.myForm.EMail.value == "" ) {
             alert( "Please provide your Email!" );
             document.myForm.EMail.focus();
             return false;
          }
+         
+
+          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.myForm.EMail.value)==false)
+         {
+         
+         alert("You have entered an invalid email address!")
+         return (false)
+         }
          if( document.myForm.Password.value == "")
             {
             
             alert( "Please provide a password " );
             document.myForm.Password.focus() ;
-            return false;}
+            return false; }
             if( document.myForm.Confirm.value == "")
             {
             
@@ -67,17 +89,35 @@
             document.myForm.Confirm.focus() ;
             return false;
          }
-      
+         if(Pass!=CPass)
+         {
+            alert("Passwords not matching")
+            return false;
+         }
          
          if( document.myForm.Country.value == "-1" ) {
-            alert( "Please provide your country!" );
+            text="Please provide country";
+            document.getElementById("Country").innerHTML=text;
+           // alert( "Please provide your country!" );
+            //return false;
+         }
+
+         if( document.myForm.mobile.value==""){
+            alert("Please provide Mobile No")
             return false;
-         }return inputvalue();
-        
+         }
+         if(phone.length!=10)
+         {
+            alert("Invalid phone no")
+            return false;
+         }
+         return inputvalue();
       }
+      
        function inputvalue()
        {
           var names=document.getElementById("Name").value;
-          alert('The input name is '+names);
+          window.alert('Hi '+names+'!!');
+
        }
 </script>
