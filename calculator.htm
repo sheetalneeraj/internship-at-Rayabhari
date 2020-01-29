@@ -7,9 +7,12 @@
         </script>
     </head>
     <link rel="stylesheet" href="calculator.css">
-<body bgcolor="#f7f7f7">
+<body bgcolor="#f7f7f7">   <div id="txt1" style="margin-top: 33.5%;"> </div>
+
+
     <table> 
-        <tr> 
+   
+               <tr> 
            <td colspan="6"><input type="text" id="result" style="height:50px;" class="result"/></td> 
            <!-- clr() function will call clr to clear all value -->
            
@@ -20,14 +23,16 @@
            <td><input type="button"  class="buttons" value="8" onclick="obj.dis('8')"/> </td> 
            <td><input type="button" class="buttons" value="9" onclick="obj.dis('9')"/> </td> 
            <td><input type="button"  class="buttons" value="/" onclick="obj.dis('/')"/> </td> 
-           <td><input type="button" class="buttons" value="<--" onclick="obj.dis('<--')"/></td>
+           <td><input type="button" class="buttons" id="back" value="&#9003" onclick="obj.back()"/></td>
            <td><input type="button" class="buttons" value="C" onclick="obj.clr()"/> </td> 
-        </tr> 
+        </tr> </tr>
         <tr> 
            <td><input type="button" class="buttons" value="4" onclick="obj.dis('4')"/> </td> 
            <td><input type="button" class="buttons" value="5" onclick="obj.dis('5')"/> </td> 
            <td><input type="button" class="buttons" value="6" onclick="obj.dis('6')"/> </td> 
            <td><input type="button" class="buttons" value="*" onclick="obj.dis('*')"/> </td> 
+           <td><input type="button" class="buttons" value="(" onclick="obj.dis('(')"/> </td> 
+           <td><input type="button" class="buttons" value=")" onclick="obj.dis(')')"/> </td> 
            <!--<td><input type="button" class="buttons" value="(" onclick="dis('(')"/></td>
            <td><input type="button" class="buttons" value="(" onclick="dis(')')"/></td>-->
         </tr> 
@@ -36,6 +41,8 @@
            <td><input type="button" class="buttons" value="2" onclick="obj.dis('2')"/> </td> 
            <td><input type="button" class="buttons" value="3" onclick="obj.dis('3')"/> </td> 
            <td><input type="button" class="buttons" value="-" onclick="obj.dis('-')"/> </td> 
+           <td><input type="button" class="buttons" value="x&sup2;" onclick="obj.pow()"/> </td>
+           <td><input type="button" class="buttons" value="√x" onclick="obj.sqrt()"/> </td>  
         </tr> 
         <tr> 
            <td><input type="button" class="buttons" value="0" onclick="obj.dis('0')"/> </td> 
@@ -48,3 +55,4 @@
      </table> 
 </body>    
 </html>
+
