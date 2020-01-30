@@ -1,5 +1,5 @@
-div{
-    margin-top: 33.5%;
+body{
+    height: 100%;
 }
 .result
 {    width:1274px;
@@ -24,6 +24,25 @@ div{
     height:30px;
 
 }
+.division
+{ display: flex;
+    flex-direction: column-reverse;
+    height: 600px;
+    
+    
+}
+.division>div{
+    border-top:1px solid #d3d0cd;
 
+    
+    flex-direction: column-reverse;
+    padding:5px;
+    
 
- 
+}
+ .divider{
+    border-top:1px solid #d3d0cd;
+     display: flex;
+     flex-direction:column;
+     
+ }

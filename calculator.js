@@ -58,8 +58,10 @@ class Calci
     {
         var displayString=document.createElement("div")
         displayString.innerHTML=value;
+        displayString.id="txt"
         var element=document.getElementById("txt1");
         element.appendChild(displayString);
+        
     }
 }
 obj=new Calci();

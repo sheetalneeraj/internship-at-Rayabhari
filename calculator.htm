@@ -7,11 +7,11 @@
         </script>
     </head>
     <link rel="stylesheet" href="calculator.css">
-<body bgcolor="#f7f7f7">   <div id="txt1" style="margin-top: 33.5%;"> </div>
-
-
-    <table> 
-   
+<body bgcolor="#f7f7f7">   <div id="txt1" class="division"  > 
+   <div id="txt" class="divider"></div> 
+</div>
+    <table><div id="txt"></div> 
+    
                <tr> 
            <td colspan="6"><input type="text" id="result" style="height:50px;" class="result"/></td> 
            <!-- clr() function will call clr to clear all value -->
@@ -30,7 +30,7 @@
            <td><input type="button" class="buttons" value="4" onclick="obj.dis('4')"/> </td> 
            <td><input type="button" class="buttons" value="5" onclick="obj.dis('5')"/> </td> 
            <td><input type="button" class="buttons" value="6" onclick="obj.dis('6')"/> </td> 
-           <td><input type="button" class="buttons" value="*" onclick="obj.dis('*')"/> </td> 
+           <td><input type="button" class="buttons" value="&#x2715" onclick="obj.dis('*')"/> </td> 
            <td><input type="button" class="buttons" value="(" onclick="obj.dis('(')"/> </td> 
            <td><input type="button" class="buttons" value=")" onclick="obj.dis(')')"/> </td> 
            <!--<td><input type="button" class="buttons" value="(" onclick="dis('(')"/></td>
@@ -52,7 +52,8 @@
            <td><input type="button" class="buttons" value="+" onclick="obj.dis('+')"/> </td> 
            <td colspan="2"><input type="button" class="equal" value="=" onclick="obj.solve()"/> </td> 
         </tr> 
-     </table> 
+     </table>
+   
 </body>    
 </html>
 
